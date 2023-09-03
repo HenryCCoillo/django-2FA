@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  /* background: linear-gradient(135deg, #71b7e6, #9b59b6); */
+  background: url('https://s32519.pcdn.co/wp-content/uploads/2016/06/blog-supermarket-inventory-management-1.jpg.optimal.jpg')no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.container1{
+  max-width: 700px;
+  width: 100%;
+  backdrop-filter: blur(2px);
+  padding: 50px 40px 30px;
+  border-radius: 5px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.3);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  border: 2px solid rgba(255,255,255,0.5);
+  color: #fff;
+}
+.container1 .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  text-align: center;
+}
+/* .container1 .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+} */
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  color: #fff;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input::placeholder{
+  color: #fff;
+}
+.user-details .input-box input.icon-eyes{
+  width: auto;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  /* border-color: #9b59b6; */
+  /* border-color: #fff; */
+  box-shadow: 0 0 0 0.2rem rgba(255,255,255,.25);  
+}
+
+
+form .button{
+  height: 45px;
+  margin-top: 30px;
+}
+
+form .button input {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* background: linear-gradient(135deg, #71b7e6, #9b59b6); */
+  background: rgba(255,255,255,0.3);
+}
+
+form .button input:focus,
+form .button input:hover{
+  /* transform: scale(0.99); */
+  /* background: linear-gradient(-135deg, #71b7e6, #9b59b6); */
+  background-color: rgba(255,255,255,0.85);
+  color: #000;
+}
+
+
+.register{
+  font-size: .9em;
+  color: #fff;
+  text-align: center;
+  margin: 10px 0 10px;
+}
+.register p{
+  padding-top: 8px;
+  margin: 0;
+}
+.register p a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+.register p a:hover{
+  text-decoration: underline;
+}
+@media(max-width: 584px){
+  .container1{
+    max-width: 100%;
+  }
+  form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+}
+
+@media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
+
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<style>
+.btn-outline-secondary{color: #fff;}
+.form-control{color: #fff;}
+.form-control:focus{color: #fff;}
+.form-control::placeholder{color:#fff ;opacity:1}
+.form-control::-webkit-input-placeholder{color:#fff;opacity:1}
+.form-control::-moz-placeholder{color:#fff;opacity:1}
+.form-control:-ms-input-placeholder{color:#fff;opacity:1}
+.form-control::-ms-input-placeholder{color:#fff;opacity:1}
+.btn-outline-secondary{border-color: #fff;}
+.btn-outline-secondary:hover {background-color:rgb(0, 0, 0,0.5);border-color:#fff}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: #fff;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+</style>
+
+
+
+<div class="container1">
+    <div class="title">Register</div>
+    <div class="content">
+      <form action="#" method="post">
+        {% csrf_token %}
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">First Name</span>
+            <!-- <input type="text" placeholder="Enter your first name" required> -->
+            {{ form.first_name }}
+        </div>
+        <div class="input-box">
+            <span class="details">Last Name</span>
+            <!-- <input type="text" placeholder="Enter your last name" required> -->
+            {{ form.last_name }}
+        </div>
+        <div class="input-box">
+            <span class="details">Username</span>
+            <!-- <input type="text" placeholder="Enter your username" required> -->
+            {{ form.username }}
+          </div>
+          <div class="input-box">
+              <span class="details">Email</span>
+              <!-- <input type="email" placeholder="Enter your email" required> -->
+              {{ form.email }}
+          </div>
+          <div class="input-box">
+              <span class="details">Password</span>
+            <!-- <input type="password" placeholder="Enter your password" class="form-control icon-eyes" data-toggle="password" id="password" required> -->
+            {{ form.password1 }}
+            {{ form.errors.password }}
+        </div>
+          <div class="input-box">
+              <span class="details">Confirm Password</span>
+              <!-- <input type="password" placeholder="Confirm your password" class="form-control icon-eyes" data-toggle="password" id="password" required> -->
+            {{ form.password2 }}
+        </div>
+    </div>
+    
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+        <div class="register">
+            <p>Have an account?  <a href="{% url 'two_factor:login' %}">Go to Sign in</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-show-password@1.2.1/dist/bootstrap-show-password.min.js"></script>
+
+</body>
+</html>
